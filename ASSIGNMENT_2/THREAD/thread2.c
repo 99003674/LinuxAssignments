@@ -8,39 +8,27 @@ int arr[1000]={42, 16, 45, 38, 44, 3, 28, 47, 4, 38, 2, 30, 47, 31, 41, 12, 15, 
 int x=0;
 int y=200;
 
-void* task_body(void *arg)
-{ 
-char* pv=arg;
-printf("In Range %s\n",pv);
-int min=arr[0];
-int max=arr[0];
-for(int i=x;i<y-1;i++)
-if(arr[i]>=arr[i+1])
-{
-if (arr[i]>=max)
-{
-max=arr[i];
+void* task_body(void* arg){
+    char* pv = arg;
+    printf("Welcome -- %s\n", pv);
+    for(int i = x; i < y-1; i++){
+        if(array[i] > array[i+1])
+        {
+            if(Max < array[i]){
+                Max = array[i];
+            }
+        }
 
-}
-else if(arr[i]<=arr[i+1])
-{
-if(arr[i]<=min)
-{
-min=arr[i];
-}
-
-}
-
-
-
-
-
-
-
-}
-x+=200;
-y+=200;
-printf("Max in the list is %d and min is %d\n",max,min);
+        else if(array[i] < array[i+1]){
+            if(Min > array[i])
+            {
+                Min = array[i+1];
+            }
+        }
+    }
+    x += 200;
+    y += 200;
+    printf("Max = %d and Min = %d\n", Max, Min);
 }
 int main()
 {
