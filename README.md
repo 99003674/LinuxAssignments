@@ -1,2 +1,2 @@
 # LinuxAssignments
-This repository has all the assignments of Linux OS.
+This repository has all the assignments of Linux OS and Programming.
